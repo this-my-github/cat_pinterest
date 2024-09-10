@@ -1,0 +1,53 @@
+.container {
+  padding: 116px 62px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.catCard {
+  width: 225px;
+  height: 225px;
+  position: relative;
+
+  transition: transform 0.3s ease;
+}
+
+img {
+  width: 225px;
+  height: 225px;
+}
+
+.catCard.clicked,
+.catCard:hover {
+  transform: scale(1.14);
+  box-shadow: 0px 6px 5px 0px #0000003d;
+}
+
+.icon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  right: 0;
+  bottom: 3px;
+  color: red;
+
+  font-size: 58.4px;
+  line-height: 36.7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.iconСlicked {
+  opacity: 1;
+}
+
+.catCard:hover .icon {
+  opacity: 1;
+}
