@@ -1,4 +1,3 @@
-version: '3.7'
 services:
   proxy:
     container_name: cat-pinterest-proxy
@@ -49,12 +48,7 @@ services:
     networks:
       - cat-pinterest-net
     env_file:
-    - ./api/.env
-    environment:
-    POSTGRES_USER: ${POSTGRES_USER}
-    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    POSTGRES_DB: ${POSTGRES_DB}
-    #      PG_DATA: /var/lib/postgresql/data
+      - ./api/.env
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 2s
@@ -62,4 +56,4 @@ services:
       retries: 10
 
 networks:
-  cat-pinterest-net:
+  cat-pinterest-net: {}
